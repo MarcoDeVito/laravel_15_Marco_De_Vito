@@ -14,6 +14,17 @@ class FrontController extends Controller
    public function home(){
     return view('pages.homepage');
    }
+   public function showUser($user){
+    
+       
+    $user= User::where('name', $user )->first();
+       if(!$user){
+        abort(404);
+       }
+       
+    
+    return view('articles.user', compact('user'));
+   }
    public function update_profile(UpdateProfileRequest $request)
    {
       

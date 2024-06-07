@@ -12,7 +12,7 @@ Route::resource('articles',ArticleController::class);
 Route::resource('categories',CategoryController::class);
 Route::post('/articles/search', [ArticleController::class,"search"])->name('articles.search');
 
-
+Route::get('/articles/user/{name}', [FrontController::class,"showUser"])->name("articles.user");
 
 Route::get('/dettaglio-articolo/{slug}', function () {
     return view('pages.detail');

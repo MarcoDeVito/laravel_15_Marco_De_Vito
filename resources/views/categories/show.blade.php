@@ -19,7 +19,7 @@
                                     <img class="card-img-top" style="width:3rem" src="{{Storage::url($article->image ?? "/template/assets/book.png")}}" alt="{{$article->title}}" />
                                     
                                    
-                                    <p class="blog-post-meta"> Scritto da <a href="#">{{$article->user->name}}</a> il {{$article->created_at}}</p>
+                                    <p class="blog-post-meta"> Scritto da <a href="{{route('articles.user',$article->user->name)}}">{{$article->user->name}}</a> il {{$article->created_at}}</p>
     
                                   
 

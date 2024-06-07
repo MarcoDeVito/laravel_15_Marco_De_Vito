@@ -9,7 +9,7 @@
     
                     <article class="blog-post">
                         <h2 class="display-5 link-body-emphasis mb-1">{{$article->title}}</h2>
-                        <p class="blog-post-meta">{{$article->created_at}} by <a href="#">{{$article->user->name}}</a></p>
+                        <p class="blog-post-meta">{{$article->created_at}} by <a href="{{route('articles.user',$article->user->name)}}">{{$article->user->name}}</a></p>
     
                         <p>{{$article->body}}</p>
                        

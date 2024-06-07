@@ -27,16 +27,16 @@
                     </div>
                     <div class="form-control mb-3">
 
-                        <div class="form-check">
-                            @forelse ( $categories as $category)
+                        @forelse ( $categories as $category)
+                            <div class="form-check">
                                  <input class="form-check-input" type="checkbox" id="category_id" name="categories[]"
                                 value="{{ $category->id}}">
                             <label class="form-check-label" for="category_id">{{$category->name}}</label>
+                            </div>
                             @empty
                                 Nessun categoria, <a href="{{route("categories.create")}}">creane una</a>
                             @endforelse
                            
-                        </div>
 
 
 
